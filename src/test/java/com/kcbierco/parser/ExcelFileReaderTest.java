@@ -1,8 +1,8 @@
 package com.kcbierco.parser;
 
 import com.kcbierco.fixture.ResourceFileFinder;
-import com.kcbierco.models.ExcelParsingConfig;
 
+import com.kcbierco.models.ImportantDatesToWatchConfig;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -20,17 +20,17 @@ public class ExcelFileReaderTest {
 
     @Before
     public void setUp(){
-        excelFileReader = new ExcelFileReader("", new ExcelParsingConfig());
+        excelFileReader = new ExcelFileReader("", new ImportantDatesToWatchConfig());
     }
 
     @Test
     public void testParseDatesFromExcelFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
-        ExcelParsingConfig excelParsingConfig = new ExcelParsingConfig();
-        excelParsingConfig.setWorksheetName("Test");
-        excelParsingConfig.setCellsWithDates(Arrays.asList(new String[]{"B3", "B4", "B5", "B6"}));
+        ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
+        importantDatesToWatchConfig.setWorksheetName("Test");
+        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"B3", "B4", "B5", "B6"}));
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
-                , excelParsingConfig);
+                , importantDatesToWatchConfig);
 
         List<Date> dates = excelFileReader.parseDatesFromExcelFile();
         Assert.assertNotNull(dates);
@@ -39,12 +39,12 @@ public class ExcelFileReaderTest {
 
     @Test
     public void testParseDatesFromExcelFileCaseDoesNotMatter() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
-        ExcelParsingConfig excelParsingConfig = new ExcelParsingConfig();
-        excelParsingConfig.setWorksheetName("Test");
-        excelParsingConfig.setCellsWithDates(Arrays.asList(new String[] {"b3", "b4", "b5", "b6"}));
+        ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
+        importantDatesToWatchConfig.setWorksheetName("Test");
+        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
-                , excelParsingConfig);
+                , importantDatesToWatchConfig);
 
         List<Date> dates = excelFileReader.parseDatesFromExcelFile();
         Assert.assertNotNull(dates);
@@ -53,12 +53,13 @@ public class ExcelFileReaderTest {
 
     @Test
     public void testParseDatesFromExcelXlsFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
-        ExcelParsingConfig excelParsingConfig = new ExcelParsingConfig();
-        excelParsingConfig.setWorksheetName("Test");
-        excelParsingConfig.setCellsWithDates(Arrays.asList(new String[] {"B3", "B4", "B5", "B6"}));
+        ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
+        importantDatesToWatchConfig.setWorksheetName("Test");
+        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
+
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormulaXLS.xls")
-                , excelParsingConfig);
+                , importantDatesToWatchConfig);
 
         List<Date> dates = excelFileReader.parseDatesFromExcelFile();
         Assert.assertNotNull(dates);
@@ -67,13 +68,13 @@ public class ExcelFileReaderTest {
 
     @Test
     public void testParseTankInfoFromExcelFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
-        ExcelParsingConfig excelParsingConfig = new ExcelParsingConfig();
-        excelParsingConfig.setWorksheetName("Test");
-        excelParsingConfig.setCellsWithDates(Arrays.asList(new String[]{"B3", "B4", "B5", "B6"}));
-        excelParsingConfig.setCellWithTankInfo("E3");
+        ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
+        importantDatesToWatchConfig.setWorksheetName("Test");
+        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
+        importantDatesToWatchConfig.setCellWithTankInfo("E3");
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
-                , excelParsingConfig);
+                , importantDatesToWatchConfig);
 
         String tankName = excelFileReader.parseTankInfoFromExcelFile();
         Assert.assertNotNull(tankName);
@@ -82,13 +83,13 @@ public class ExcelFileReaderTest {
 
     @Test
     public void testParseTankInfoFromExcelXlsFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
-        ExcelParsingConfig excelParsingConfig = new ExcelParsingConfig();
-        excelParsingConfig.setWorksheetName("Test");
-        excelParsingConfig.setCellsWithDates(Arrays.asList(new String[]{"B3", "B4", "B5", "B6"}));
-        excelParsingConfig.setCellWithTankInfo("E3");
+        ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
+        importantDatesToWatchConfig.setWorksheetName("Test");
+        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
+        importantDatesToWatchConfig.setCellWithTankInfo("E3");
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormulaXLS.xls")
-                , excelParsingConfig);
+                , importantDatesToWatchConfig);
 
         String tankName = excelFileReader.parseTankInfoFromExcelFile();
         Assert.assertNotNull(tankName);

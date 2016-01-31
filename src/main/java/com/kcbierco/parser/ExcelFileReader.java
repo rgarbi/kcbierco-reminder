@@ -1,6 +1,7 @@
 package com.kcbierco.parser;
 
 import com.kcbierco.models.ExcelParsingConfig;
+import com.kcbierco.models.ImportantDatesToWatchConfig;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -21,9 +22,9 @@ import java.util.List;
 public class ExcelFileReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExcelFileReader.class);
     private String excelFilePath;
-    private ExcelParsingConfig excelParsingConfig;
+    private ImportantDatesToWatchConfig excelParsingConfig;
 
-    public ExcelFileReader(String excelFilePath, ExcelParsingConfig excelParsingConfig){
+    public ExcelFileReader(String excelFilePath, ImportantDatesToWatchConfig excelParsingConfig){
         this.excelFilePath = excelFilePath;
         this.excelParsingConfig = excelParsingConfig;
     }

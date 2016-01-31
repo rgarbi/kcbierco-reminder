@@ -6,40 +6,22 @@ import java.util.List;
  * Created by Richard on 1/30/16.
  */
 public class ExcelParsingConfig {
-    private String worksheetName;
-    private List<String> cellsWithDates;
-    private String baseEmailMessage;
-    private String cellWithTankInfo;
+    private String activeBatchDirectory;
+    private List<ImportantDatesToWatchConfig> importantDatesToWatch;
 
-    public String getWorksheetName() {
-        return worksheetName;
+    public String getActiveBatchDirectory() {
+        return activeBatchDirectory;
     }
 
-    public void setWorksheetName(String worksheetName) {
-        this.worksheetName = worksheetName;
+    public void setActiveBatchDirectory(String activeBatchDirectory) {
+        this.activeBatchDirectory = activeBatchDirectory;
     }
 
-    public List<String> getCellsWithDates() {
-        return cellsWithDates;
+    public List<ImportantDatesToWatchConfig> getImportantDatesToWatch() {
+        return importantDatesToWatch;
     }
 
-    public void setCellsWithDates(List<String> cellsWithDates) {
-        this.cellsWithDates = cellsWithDates;
-    }
-
-    public String getCellWithTankInfo() {
-        return cellWithTankInfo;
-    }
-
-    public void setCellWithTankInfo(String cellWithTankInfo) {
-        this.cellWithTankInfo = cellWithTankInfo;
-    }
-
-    public String getBaseEmailMessage() {
-        return baseEmailMessage;
-    }
-
-    public void setBaseEmailMessage(String baseEmailMessage) {
-        this.baseEmailMessage = baseEmailMessage;
+    public void setImportantDatesToWatch(List<ImportantDatesToWatchConfig> importantDatesToWatch) {
+        this.importantDatesToWatch = importantDatesToWatch;
     }
 }

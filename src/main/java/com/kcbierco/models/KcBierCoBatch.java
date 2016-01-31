@@ -3,9 +3,6 @@ package com.kcbierco.models;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Richard on 1/31/16.
- */
 public class KcBierCoBatch {
     private String batchSpreadsheetFilePath;
     private String tankName;
