@@ -7,10 +7,17 @@ repositories {
     jcenter()
 }
 
+version = '0.1.0'
+mainClassName = 'com.kcbeirco.Application'
+
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'org.slf4j:slf4j-simple:1.7.7'
+
     compile 'org.apache.poi:poi:3.13'
+
 
     testCompile 'junit:junit:4.12'
 }
