@@ -1,4 +1,4 @@
-package com.kcbeirco.fixture;
+package com.kcbierco.fixture;
 
 /**
  * Created by Richard on 1/30/16.

@@ -1,7 +1,7 @@
-package com.kcbeirco.parser;
+package com.kcbierco.parser;
 
-import com.kcbeirco.fixture.ResourceFileFinder;
-import com.kcbeirco.models.ExcelParsingConfig;
+import com.kcbierco.fixture.ResourceFileFinder;
+import com.kcbierco.models.ExcelParsingConfig;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;

@@ -1,6 +1,6 @@
-package com.kcbeirco.parser;
+package com.kcbierco.parser;
 
-import com.kcbeirco.models.ExcelParsingConfig;
+import com.kcbierco.models.ExcelParsingConfig;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;

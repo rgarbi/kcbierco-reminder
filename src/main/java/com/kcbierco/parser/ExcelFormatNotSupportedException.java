@@ -1,4 +1,4 @@
-package com.kcbeirco.parser;
+package com.kcbierco.parser;
 
 /**
  * Created by Richard on 1/31/16.

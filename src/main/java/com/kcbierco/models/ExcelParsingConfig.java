@@ -1,4 +1,4 @@
-package com.kcbeirco.models;
+package com.kcbierco.models;
 
 import java.util.List;
 
