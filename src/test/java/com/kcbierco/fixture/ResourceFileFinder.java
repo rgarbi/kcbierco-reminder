@@ -6,7 +6,7 @@ package com.kcbierco.fixture;
 public class ResourceFileFinder {
 
     public static String findFileInResources(String name){
-        return ResourceFileFinder.class.getResource("/com/kcbeirco/" + name).getFile();
+        return ResourceFileFinder.class.getResource("/com/kcbierco/" + name).getFile();
     }
 
 }
