@@ -1,0 +1,11 @@
+{
+  "activeBatchDirectory": "",
+  "importantDatesToWatch": [
+      {
+        "worksheetName": "",
+        "cellWithTankInfo": "",
+        "cellsWithDates": [],
+        "baseEmailMessage": ""
+      }
+  ]
+}
