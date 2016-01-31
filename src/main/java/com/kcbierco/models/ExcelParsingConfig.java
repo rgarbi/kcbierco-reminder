@@ -8,6 +8,7 @@ import java.util.List;
 public class ExcelParsingConfig {
     private String worksheetName;
     private List<String> cellsWithDates;
+    private String baseEmailMessage;
     private String cellWithTankInfo;
 
     public String getWorksheetName() {
@@ -32,5 +33,13 @@ public class ExcelParsingConfig {
 
     public void setCellWithTankInfo(String cellWithTankInfo) {
         this.cellWithTankInfo = cellWithTankInfo;
+    }
+
+    public String getBaseEmailMessage() {
+        return baseEmailMessage;
+    }
+
+    public void setBaseEmailMessage(String baseEmailMessage) {
+        this.baseEmailMessage = baseEmailMessage;
     }
 }

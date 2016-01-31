@@ -1,5 +1,8 @@
-{
-  "worksheetName": "",
-  "cellWithTankInfo": "",
-  "cellsWithDates": []
-}
+[
+    {
+      "worksheetName": "",
+      "cellWithTankInfo": "",
+      "cellsWithDates": [],
+      "baseEmailMessage": ""
+    }
+]
