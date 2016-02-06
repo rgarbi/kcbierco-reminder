@@ -13,7 +13,7 @@ public class ConfigLoaderTest {
     public void testLoadTheConfig() throws IOException, ExcelFormatNotSupportedException {
         ExcelParsingConfig excelParsingConfig = ConfigLoader.loadTheConfig(ResourceFileFinder.findFileInResources("config.json"));
         Assert.assertNotNull(excelParsingConfig);
-        Assert.assertEquals(1, excelParsingConfig.getImportantDatesToWatch().size());
+        Assert.assertEquals(2, excelParsingConfig.getImportantDatesToWatch().size());
     }
 
 }

@@ -149,9 +149,4 @@ public class ReminderManagerTest {
         Assert.assertEquals(1, MockEmailService.getNumberOfEmailsSent());
     }
 
-
-
-
-
-
 }
