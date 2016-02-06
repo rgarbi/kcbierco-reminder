@@ -15,6 +15,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -134,6 +135,21 @@ public class ReminderManagerTest {
 
         Assert.assertEquals(2, MockEmailService.getNumberOfEmailsSent());
     }
+
+
+    @Test
+    public void sendReminderIfNeededTest() throws IOException {
+        String file = ResourceFileFinder.findFileInResources("config.json");
+        String parentDir = new File(file).getParent();
+        ExcelParsingConfig excelParsingConfig = ConfigLoader.loadTheConfig(file);
+        excelParsingConfig.setActiveBatchDirectory(parentDir);
+
+        reminderManager.sendReminderIfNeeded(excelParsingConfig);
+
+        Assert.assertEquals(1, MockEmailService.getNumberOfEmailsSent());
+    }
+
+
 
 
 
