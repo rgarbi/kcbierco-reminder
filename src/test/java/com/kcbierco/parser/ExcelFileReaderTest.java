@@ -14,9 +14,13 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ExcelFileReaderTest {
     protected ExcelFileReader excelFileReader;
+    protected static final String WORKSHEET = "Cellar Record";
+    protected static final List<String> CELLS_WITH_DATES = Arrays.asList(new String[] {"B16", "B17", "B18", "B19"});
+    protected static final String TANK_INFO = "I5";
 
     @Before
     public void setUp(){
@@ -26,8 +30,8 @@ public class ExcelFileReaderTest {
     @Test
     public void testParseDatesFromExcelFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
         ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
-        importantDatesToWatchConfig.setWorksheetName("Test");
-        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"B3", "B4", "B5", "B6"}));
+        importantDatesToWatchConfig.setWorksheetName(WORKSHEET);
+        importantDatesToWatchConfig.setCellsWithDates(CELLS_WITH_DATES);
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
                 , importantDatesToWatchConfig);
@@ -40,8 +44,8 @@ public class ExcelFileReaderTest {
     @Test
     public void testParseDatesFromExcelFileCaseDoesNotMatter() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
         ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
-        importantDatesToWatchConfig.setWorksheetName("Test");
-        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
+        importantDatesToWatchConfig.setWorksheetName(WORKSHEET);
+        importantDatesToWatchConfig.setCellsWithDates(CELLS_WITH_DATES.stream().map(cell -> cell.toLowerCase()).collect(Collectors.toList()));
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
                 , importantDatesToWatchConfig);
@@ -54,8 +58,8 @@ public class ExcelFileReaderTest {
     @Test
     public void testParseDatesFromExcelXlsFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
         ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
-        importantDatesToWatchConfig.setWorksheetName("Test");
-        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
+        importantDatesToWatchConfig.setWorksheetName(WORKSHEET);
+        importantDatesToWatchConfig.setCellsWithDates(CELLS_WITH_DATES.stream().map(cell -> cell.toLowerCase()).collect(Collectors.toList()));
 
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormulaXLS.xls")
@@ -69,31 +73,31 @@ public class ExcelFileReaderTest {
     @Test
     public void testParseTankInfoFromExcelFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
         ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
-        importantDatesToWatchConfig.setWorksheetName("Test");
-        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
-        importantDatesToWatchConfig.setCellWithTankInfo("E3");
+        importantDatesToWatchConfig.setWorksheetName(WORKSHEET);
+        importantDatesToWatchConfig.setCellsWithDates(CELLS_WITH_DATES.stream().map(cell -> cell.toLowerCase()).collect(Collectors.toList()));
+        importantDatesToWatchConfig.setCellWithTankInfo(TANK_INFO);
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormula.xlsx")
                 , importantDatesToWatchConfig);
 
         String tankName = excelFileReader.parseTankInfoFromExcelFile();
         Assert.assertNotNull(tankName);
-        Assert.assertEquals("Tank 334", tankName);
+        Assert.assertEquals("Tank 34", tankName);
     }
 
     @Test
     public void testParseTankInfoFromExcelXlsFile() throws IOException, WorksheetNotFoundException, ExcelFormatNotSupportedException {
         ImportantDatesToWatchConfig importantDatesToWatchConfig = new ImportantDatesToWatchConfig();
-        importantDatesToWatchConfig.setWorksheetName("Test");
-        importantDatesToWatchConfig.setCellsWithDates(Arrays.asList(new String[]{"b3", "b4", "b5", "b6"}));
-        importantDatesToWatchConfig.setCellWithTankInfo("E3");
+        importantDatesToWatchConfig.setWorksheetName(WORKSHEET);
+        importantDatesToWatchConfig.setCellsWithDates(CELLS_WITH_DATES.stream().map(cell -> cell.toLowerCase()).collect(Collectors.toList()));
+        importantDatesToWatchConfig.setCellWithTankInfo(TANK_INFO);
 
         ExcelFileReader excelFileReader = new ExcelFileReader(ResourceFileFinder.findFileInResources("DatesFromFormulaXLS.xls")
                 , importantDatesToWatchConfig);
 
         String tankName = excelFileReader.parseTankInfoFromExcelFile();
         Assert.assertNotNull(tankName);
-        Assert.assertEquals("Tank 334", tankName);
+        Assert.assertEquals("Tank 34", tankName);
     }
 
 

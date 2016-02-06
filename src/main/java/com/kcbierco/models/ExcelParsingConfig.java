@@ -7,6 +7,9 @@ import java.util.List;
  */
 public class ExcelParsingConfig {
     private String activeBatchDirectory;
+    private List<String> emailRecipients;
+    private String sourceEmailAddress;
+    private String sourceEmailPassword;
     private List<ImportantDatesToWatchConfig> importantDatesToWatch;
 
     public String getActiveBatchDirectory() {
@@ -23,5 +26,29 @@ public class ExcelParsingConfig {
 
     public void setImportantDatesToWatch(List<ImportantDatesToWatchConfig> importantDatesToWatch) {
         this.importantDatesToWatch = importantDatesToWatch;
+    }
+
+    public List<String> getEmailRecipients() {
+        return emailRecipients;
+    }
+
+    public void setEmailRecipients(List<String> emailRecipients) {
+        this.emailRecipients = emailRecipients;
+    }
+
+    public String getSourceEmailAddress() {
+        return sourceEmailAddress;
+    }
+
+    public void setSourceEmailAddress(String sourceEmailAddress) {
+        this.sourceEmailAddress = sourceEmailAddress;
+    }
+
+    public String getSourceEmailPassword() {
+        return sourceEmailPassword;
+    }
+
+    public void setSourceEmailPassword(String sourceEmailPassword) {
+        this.sourceEmailPassword = sourceEmailPassword;
     }
 }

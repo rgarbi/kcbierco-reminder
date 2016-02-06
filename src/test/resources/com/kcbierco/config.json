@@ -1,5 +1,8 @@
 {
   "activeBatchDirectory": "",
+  "emailRecipients": [],
+  "sourceEmailAddress": "",
+  "sourceEmailPassword": "",
   "importantDatesToWatch": [
       {
         "worksheetName": "",
