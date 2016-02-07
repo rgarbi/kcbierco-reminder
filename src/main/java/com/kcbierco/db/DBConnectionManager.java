@@ -30,6 +30,8 @@ public class DBConnectionManager {
             db = createIfFirstTime();
         }
 
+        db.getEntityManager().registerEntityClass(EmailSentRecord.class);
+
         if(db.isClosed()){
             return db.open(dbUsername, dbPassword);
         }
@@ -38,18 +40,27 @@ public class DBConnectionManager {
     }
 
     protected static OObjectDatabaseTx createIfFirstTime(){
-        OObjectDatabaseTx dbConn = new OObjectDatabaseTx(dbConnectionPath + ":" + DB_NAME);
+        OObjectDatabaseTx dbConn = new OObjectDatabaseTx(formatConnectionPath());
         if(dbConn.exists()){
             return dbConn;
         }
 
         dbConn.create();
-        dbConn.getEntityManager().registerEntityClass(EmailSentRecord.class);
         return dbConn;
     }
 
+    protected static String formatConnectionPath(){
+        if(dbConnectionPath.equals("memory")){
+            return dbConnectionPath + ":" + DB_NAME;
+        } else {
+            return dbConnectionPath + "/" + DB_NAME;
+        }
+    }
+
     public static void close(){
-        db.close();
+        if(db != null) {
+            db.close();
+        }
     }
 
 }

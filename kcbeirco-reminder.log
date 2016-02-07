@@ -1,0 +1,32 @@
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAlt.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAlt.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123 Tank 2
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls.yum) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls.yum on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (DoppleAltIsYummy.xls) on this day -> Sat Feb 06 15:16:56 CST 2016
+06-02-2016 15:16:56 INFO  ReminderManager:62 - An email has not been sent for for the file DoppleAltIsYummy.xls on this date Sat Feb 06 15:16:56 CST 2016 with the message Dude check some stuff hurry! Tank 123
+06-02-2016 15:16:56 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:56 INFO  ReminderManager:39 - Found 2 in /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco
+06-02-2016 15:16:56 INFO  ReminderManager:42 - Parsing the file: /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormula.xlsx
+06-02-2016 15:16:57 INFO  ReminderManager:87 - Checking to see if an email has been sent for this file (/Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormula.xlsx) on this day -> Sat Feb 06 00:00:00 CST 2016
+06-02-2016 15:16:57 INFO  ReminderManager:62 - An email has not been sent for for the file /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormula.xlsx on this date Sat Feb 06 00:00:00 CST 2016 with the message Check Gravity In Tank Tank 34
+06-02-2016 15:16:57 INFO  ReminderManager:73 - Email sent, saving record
+06-02-2016 15:16:57 INFO  ReminderManager:42 - Parsing the file: /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormulaXLS.xls
+06-02-2016 15:16:57 INFO  ReminderManager:42 - Parsing the file: /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormula.xlsx
+06-02-2016 15:16:57 INFO  ReminderManager:42 - Parsing the file: /Users/Richard/dev-git/kcbierco-reminder/build/resources/test/com/kcbierco/DatesFromFormulaXLS.xls
+06-02-2016 15:16:58 INFO  ExcelFileReader:72 - Files with the extension txt are not currently supported.
