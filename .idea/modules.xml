@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kcbierco-reminder.iml" filepath="$PROJECT_DIR$/kcbierco-reminder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kcbierco-reminder_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kcbierco-reminder_main.iml" group="kcbierco-reminder" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kcbierco-reminder_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kcbierco-reminder_test.iml" group="kcbierco-reminder" />
+    </modules>
+  </component>
+</project>
